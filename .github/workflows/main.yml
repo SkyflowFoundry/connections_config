@@ -40,8 +40,8 @@ jobs:
         run: python skyflow_connections_setup.py 
         env:
           VAULT_OWNER_SA_API_KEY: ${{secrets.VAULT_OWNER_SA_API_KEY}}
-          REQUEST_BIN_BASE_URL: ${{variables.REQUEST_BIN_BASE_URL}}
-          REQUEST_BIN_RELATIVE_PATH: ${{variables.REQUEST_BIN_RELATIVE_PATH}}
-          SKYFLOW_ACCOUNT_ID: ${{variables.SKYFLOW_ACCOUNT_ID}}
-          SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT: ${{variables.SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT}}
-          VAULT_ID: ${{variables.VAULT_ID}}
+          REQUEST_BIN_BASE_URL: ${{env.REQUEST_BIN_BASE_URL}}
+          REQUEST_BIN_RELATIVE_PATH: ${{env.REQUEST_BIN_RELATIVE_PATH}}
+          SKYFLOW_ACCOUNT_ID: ${{env.SKYFLOW_ACCOUNT_ID}}
+          SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT: ${{env.SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT}}
+          VAULT_ID: ${{env.VAULT_ID}}
