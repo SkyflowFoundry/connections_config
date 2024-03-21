@@ -2,7 +2,7 @@ import os
 import json
 import requests
 import sys
-'''
+
 # Define constants
 # Change the below 6 constants according to your vault and RequestBin entries
 SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT = str(os.environ.get('SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT', ''))
