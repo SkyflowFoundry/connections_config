@@ -1,26 +1,10 @@
 # Testing Skyflow Connections with PipeDream
 
-This repository contains Python scripts to set up and run a connection between Skyflow and PipeDream, which serves as an echo server for connection testing. The scripts are designed to be run in sequence and are a reference for setting up and running connections with Skyflow. Additionally, the repository contains a GitHub Actions workflow to automate the process of updating the connection with new configuration values.
-
-## 0. Prerequisites
-
-Before you begin, get the following information and update the constants at the top of `skyflow_connections_setup.py`:
-
-- `VAULT_ID`: ID of the vault. To get a vault's ID in Studio, navigate to the vault, then click the gear icon (Settings) in the side navigation.
-- `SKYFLOW_ACCOUNT_ID`: ID of the Skyflow account. To get an account ID in Studio, navigate to a vault, then click the gear icon (Settings) in the side navigation.
-- `VAULT_OWNER_SA_CREDENTIALS`: A bearer token for a service account with Vault Owner permissions.
-  
-  For Trial environments, use the following process.
-  1. In Studio, click your account icon and choose **Generate API Bearer Token**.
-  2. Click **Generate Token**.
-
-  For Sandbox and Production environments, generate a bearer token from service account credentials with the [Python SDK](https://github.com/skyflowapi/skyflow-python/blob/main/samples/generate_bearer_token_from_creds_sample.py). For more information and options, see [Authenticate](https://docs.skyflow.com/api-authentication/).
-
-  If you don't have a service account with the Vault Owner permissions, you can create a service account through [Studio](https://docs.skyflow.com/api-authentication/#create-a-service-account) or with the [Management API](https://docs.skyflow.com/management/#ServiceAccountService_CreateAPIKey).
-
-You can change `REQUEST_BIN_BASE_URL`, but feel free to use the one specified in the script.
+This repository contains a procedure and Python scripts to set up and run a connection between Skyflow and PipeDream, which serves as an echo server for connection testing. The scripts also act as references for setting up and running connections with Skyflow. Additionally, the repository contains a GitHub Actions workflow to automate the process of updating the connection with new configuration values.
 
 ## 1. Create a Quickstart vault
+
+Before you get started, you need a vault.
 
 To create a Quickstart vault,
 
@@ -35,7 +19,7 @@ To create a Quickstart vault,
 
 ## 2. Create an API key
 
-Next, create a service account with an API key to use with the Python scripts.
+Next, create a service account with an API key for authentication in the Python scripts.
 
 1. In the side navigation, click the people icon (Access).
 2. In the upper navigatino, click **Service accounts**.
@@ -49,7 +33,39 @@ Next, create a service account with an API key to use with the Python scripts.
 10. Click **Copy to clipboard** to copy the API key. Store it somewhere secure.
 11. Click **Got it**.
 
+## 3. Set up your local environment
 
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/SkyflowFoundry/connections_config
+   cd connections_config
+   ```
+
+1. Create a virtual environment:
+
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+
+1. Install the required packages:
+
+   ```bash
+    pip install -r requirements.txt
+    ```
+
+1. Open `skyflow_connections_setup.py` and update the constanst with the values you collected in the previous steps:
+
+    | Constant                     | Description     |
+    | ---------------------------- | --------------- |
+    | `VAULT_ID`                   | Your Vault ID.  |
+    | `SKYFLOW_ACCOUNT_ID`         | You Account ID. |
+    | `VAULT_OWNER_SA_CREDENTIALS` | You API key.    |
+
+    You can change `REQUEST_BIN_BASE_URL`, but feel free to use the one specified in the script.
+
+1. Save and close the file.
 
 ## 3. Setup Connections via [skyflow_connections_setup.py](/skyflow_connections_setup.py)
 
@@ -89,7 +105,7 @@ To set up the workflow, you need to add the `VAULT_OWNER_SA_CREDENTIALS` as a re
 3. In the left navigation, click **Secrets and variables > Actions**.
 4. Click **New repository secret**.
 5. For **Name**, enter `VAULT_OWNER_SA_CREDENTIALS`.
-6. For **Secret**, enter the bearer token for a service account with Vault Owner permissions.
+6. For **Secret**, enter your API key.
 7. Click **Add secret**.
 
 After you add the secret, the GitHub Actions workflow in [`.github/workflows/main.yaml`](/.github/workflows/main.yaml) runs whenever `config_payload.json` is modified and pushed to GitHub. The workflow updates the connection with the new configuration values.
