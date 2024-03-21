@@ -1,18 +1,22 @@
-# Skyflow Connections Setup
+# Testing Skyflow Connections with PipeDream
 
-To use this script, ensure you have the following information and replace it in the constants at the top of the file:
+This repository contains Python scripts to set up and run a connection between Skyflow and PipeDream, which serves as an echo server for connection testing. The scripts are designed to be run in sequence and are a reference for setting up and running connections with Skyflow.
+
+## 0. Prerequisites
+
+Before you begin, get the following information and replace it in the constants at the top of `skyflow_connections_setup.py`:
 
 - `VAULT_ID`: ID of the vault
 - `VAULT_OWNER_SA_CREDENTIALS`: Credentials of the vault service account
 - `SKYFLOW_ACCOUNT_ID`: ID of the Skyflow account
 
-You could also change the `REQUEST_BIN_BASE_URL` if desired, but feel free to use the one provided in the script as well.
+You can also change the `REQUEST_BIN_BASE_URL` if desired, but feel free to use the one provided in the script as well.
 
 ## 1. Setup the vault via [vault_setup.py](/vault_setup.py)
 
 (TODO)
 
-You can create vault service credentials using the [Skyflow API](https://docs.skyflow.com/management/#ServiceAccountService_CreateAPIKey) or through the UI.
+You can create service account credentials using the [Management API](https://docs.skyflow.com/management/#ServiceAccountService_CreateAPIKey) or through [Studio](https://docs.skyflow.com/api-authentication/#create-a-service-account).
 
 ## 2. Setup Connections via [skyflow_connections_setup.py](/skyflow_connections_setup.py)
 
