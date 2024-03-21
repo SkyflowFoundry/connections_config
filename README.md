@@ -20,11 +20,21 @@ Before you begin, get the following information and update the constants at the 
 
 You can change `REQUEST_BIN_BASE_URL`, but feel free to use the one specified in the script.
 
-## 1. Set up the vault via [vault_setup.py](/vault_setup.py)
+## 1. Create a Quickstart vault
 
-(TODO)
+To create a Quickstart vault,
 
-## 2. Setup Connections via [skyflow_connections_setup.py](/skyflow_connections_setup.py)
+1. In Studio, click **Create Vault**.
+2. Click **Start with a template**, then click **Quickstart**.
+3. Click **Create**.
+
+Studio creates a Quickstart vault with two samples and some sample data.
+
+## 2. Create an API key
+
+
+
+## 3. Setup Connections via [skyflow_connections_setup.py](/skyflow_connections_setup.py)
 
 `skyflow_connections_setup.py` creates and configures a connection to PipeDream (RequestBin), which serves as an echo server. It uses a Quickstart vault and the `credit_cards` table.
 
@@ -36,7 +46,7 @@ python skyflow_connections_setup.py
 
 The script creates a connection to PipeDream and configures it to tokenize `cardholder_name`, `card_number`, `expiry_month`, and `expiry_year`.
 
-## 3. Invoke the Connection via [skyflow_connections_invocation.py](/skyflow_connections_invocation.py)
+## 4. Invoke the Connection via [skyflow_connections_invocation.py](/skyflow_connections_invocation.py)
 
 `skyflow_connections_invocation.py` invokes the connection created in the previous step with a payload of `cardholder_name`, `card_number`, `expiry_month`, and `expiry_year`.
 
@@ -51,7 +61,7 @@ After you run the script, you can verify its functionality by:
 - Observing the request and the tokenized values landing in the configured PipeDream endpoint.
 - Checking that the vault is populated with the payload of the request.
 
-## 4. Automate Connection updates with GitHub Actions
+## 5. Automate Connection updates with GitHub Actions
 
 To automate the process of updating the connection with new configuration values, you can set up a workflow to update the configuration whenever [`config_payload.json`](/config_payload.json) is modified.
 
