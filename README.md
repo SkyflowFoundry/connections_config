@@ -20,15 +20,15 @@ You can change the `REQUEST_BIN_BASE_URL`, but feel free to use the one specifie
 
 ## 2. Setup Connections via [skyflow_connections_setup.py](/skyflow_connections_setup.py)
 
-`skyflow_connections_setup.py` is a Python script and configuration used to establish a connection to PipeDream (RequestBin), which serves as an echo server. It utilizes the pre-created Quick Start vault and the `credit_cards` table.
+`skyflow_connections_setup.py` creates and configures a connection to PipeDream (RequestBin), which serves as an echo server. It uses a Quickstart vault and the `credit_cards` table.
 
-### Usage
+To run this script, run the following command in a terminal:
 
-To run this script, follow these steps:
+```bash
+python skyflow_connections_setup.py
+```
 
-1. Make the necessary changes mentioned above.
-2. Execute the script.
-3. The script will create a connection configuration to tokenize `cardholder_name`, `card_number`, `expiry_month`, `expiry_year`, and optionally `cvv`.
+The script creates a connection to PipeDream and configures it to tokenize `cardholder_name`, `card_number`, `expiry_month`, and `expiry_year`.
 
 ## 3. Invoke the Connection via [skyflow_connections_invocation.py](/skyflow_connections_invocation.py)
 
