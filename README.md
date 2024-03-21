@@ -68,7 +68,7 @@ Next, create a service account with an API key for authentication in the Python 
 
 1. Save and close the file.
 
-## 3. Setup Connections via [skyflow_connections_setup.py](/skyflow_connections_setup.py)
+## 4. Setup Connections via [skyflow_connections_setup.py](/skyflow_connections_setup.py)
 
 `skyflow_connections_setup.py` creates and configures a connection to PipeDream (RequestBin), which serves as an echo server. It uses a Quickstart vault and the `credit_cards` table.
 
@@ -80,7 +80,7 @@ python skyflow_connections_setup.py
 
 The script creates a connection to PipeDream and configures it to tokenize `cardholder_name`, `card_number`, `expiry_month`, and `expiry_year`.
 
-## 4. Invoke the Connection via [skyflow_connections_invocation.py](/skyflow_connections_invocation.py)
+## 5. Invoke the Connection via [skyflow_connections_invocation.py](/skyflow_connections_invocation.py)
 
 `skyflow_connections_invocation.py` invokes the connection created in the previous step with a payload of `cardholder_name`, `card_number`, `expiry_month`, and `expiry_year`.
 
@@ -95,7 +95,7 @@ After you run the script, you can verify its functionality by:
 - Observing the request and the tokenized values landing in the configured PipeDream endpoint.
 - Checking that the vault is populated with the payload of the request.
 
-## 5. Automate Connection updates with GitHub Actions
+## 6. Automate Connection updates with GitHub Actions
 
 To automate the process of updating the connection with new configuration values, you can set up a workflow to update the configuration whenever [`config_payload.json`](/config_payload.json) is modified.
 
