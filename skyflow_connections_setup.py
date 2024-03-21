@@ -5,7 +5,7 @@ import sys
 
 # Define constants
 # Define constants
-saAPIKey = str(os.environ.get('VAULT_OWNER_SA_API_KEY', ''))
+# saAPIKey = str(os.environ.get('VAULT_OWNER_SA_API_KEY', ''))
 
 # Change the below 6 constants according to your vault and RequestBin entries
 SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT = str(os.environ.get('SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT', ''))
