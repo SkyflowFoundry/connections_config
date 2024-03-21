@@ -4,13 +4,13 @@ This repository contains Python scripts to set up and run a connection between S
 
 ## 0. Prerequisites
 
-Before you begin, get the following information and replace it in the constants at the top of `skyflow_connections_setup.py`:
+Before you begin, get the following information and update the constants at the top of `skyflow_connections_setup.py`:
 
 - `VAULT_ID`: ID of the vault
 - `VAULT_OWNER_SA_CREDENTIALS`: Credentials of the vault service account
 - `SKYFLOW_ACCOUNT_ID`: ID of the Skyflow account
 
-You can also change the `REQUEST_BIN_BASE_URL` if desired, but feel free to use the one provided in the script as well.
+You can change the `REQUEST_BIN_BASE_URL`, but feel free to use the one specified in the script.
 
 ## 1. Setup the vault via [vault_setup.py](/vault_setup.py)
 
