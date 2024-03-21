@@ -1,4 +1,3 @@
-'''
 import os
 import json
 import requests
@@ -40,8 +39,8 @@ print(response.body)
 connection_id = response.json().get('ID')
 connection_url = response.json().get('connectionURL') + REQUEST_BIN_RELATIVE_PATH
 print("Connection URL :", connection_url)
-'''
 
+'''
 import json                                                                                                
 import requests                                                                                            
                                                                                                            
@@ -74,4 +73,5 @@ response = requests.request("POST", SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT,
 
 connection_id = response.json().get('ID')
 connection_url = response.json().get('connectionURL') + REQUEST_BIN_RELATIVE_PATH
+'''
 print("Connection URL :", connection_url)
