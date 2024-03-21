@@ -22,7 +22,7 @@ You can change the `REQUEST_BIN_BASE_URL`, but feel free to use the one specifie
 
 `skyflow_connections_setup.py` creates and configures a connection to PipeDream (RequestBin), which serves as an echo server. It uses a Quickstart vault and the `credit_cards` table.
 
-To run this script, run the following command in a terminal:
+To run this script, run the following command:
 
 ```bash
 python skyflow_connections_setup.py
@@ -32,15 +32,17 @@ The script creates a connection to PipeDream and configures it to tokenize `card
 
 ## 3. Invoke the Connection via [skyflow_connections_invocation.py](/skyflow_connections_invocation.py)
 
+`skyflow_connections_invocation.py` invokes the connection created in the previous step with a payload of `cardholder_name`, `card_number`, `expiry_month`, and `expiry_year`.
+
+To run this script, run the following command:
+
+```bash
 (TODO)
+```
 
-Next, the script will invoke the created connection with a payload of `cardholder_name`, `card_number`, `expiry_month`, and `expiry_year`.
+After you run the script, you can verify its functionality by:
 
-### Verification
-
-After running the script, you can verify its functionality by:
-
-- Observing the request and the tokenized values landing in PipeDream endpoint configured.
+- Observing the request and the tokenized values landing in the configured PipeDream endpoint.
 - Checking that the vault is populated with the payload of the request.
 
 ## 4. Automate Connection updates via GitHub Actions
