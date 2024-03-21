@@ -25,12 +25,26 @@ You can change `REQUEST_BIN_BASE_URL`, but feel free to use the one specified in
 To create a Quickstart vault,
 
 1. In Studio, click **Create Vault**.
-2. Click **Start with a template**, then click **Quickstart**.
-3. Click **Create**.
+2. Click **Start with a template**.
+3. Under **Quickstart**, click **Create**.
 
-Studio creates a Quickstart vault with two samples and some sample data.
+Studio sets up a Quickstart vault with two samples tables and some sample data.
 
 ## 2. Create an API key
+
+Next, create a service account with an API key to use with the Python scripts.
+
+1. In your vault's side navigation, click the people icon (Access).
+2. In the upper navigatino, click **Service accounts**.
+3. Click **Add service account**.
+4. For **Name**, enter a name for the service account.
+5. Click **Next**.
+6. For **Authentication type**, choose **API key**.
+7. Click **Next**.
+8. For **Select Resource**, choose your vault.
+9. Click **Create service account**.
+10. Click **Copy to clipboard** to copy the API key. Store it somewhere secure.
+11. Click **Got it**.
 
 
 
