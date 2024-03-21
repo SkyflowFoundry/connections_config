@@ -32,9 +32,6 @@ connection_creation_headers = {
 response = requests.request("POST", SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT,
                             headers=connection_creation_headers,
                             data=connection_creation_payload)
-print(response)
-print(response.request)
-print(response.body)
 # Extract connection ID and URL
 
 connection_id = response.json().get('ID')
