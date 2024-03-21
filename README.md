@@ -54,8 +54,8 @@ Next, create a service account with an API key for authentication in the Python 
 1. Install the required packages:
 
    ```bash
-    pip install -r requirements.txt
-    ```
+   pip install -r requirements.txt
+   ```
 
 1. Set your environment variables:
 
