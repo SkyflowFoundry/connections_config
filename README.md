@@ -61,8 +61,8 @@ Next, create a service account with an API key for authentication in the Python 
     | Constant                     | Description     |
     | ---------------------------- | --------------- |
     | `VAULT_ID`                   | Your Vault ID.  |
-    | `SKYFLOW_ACCOUNT_ID`         | You Account ID. |
-    | `VAULT_OWNER_SA_CREDENTIALS` | You API key.    |
+    | `SKYFLOW_ACCOUNT_ID`         | Your Account ID. |
+    | `VAULT_OWNER_SA_CREDENTIALS` | Your API key.    |
 
     You can change `REQUEST_BIN_BASE_URL`, but feel free to use the one specified in the script.
 
