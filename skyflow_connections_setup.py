@@ -8,7 +8,7 @@ import sys
 SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT = str(os.environ.get('SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT', 'https://manage.skyflowapis.com/v1/gateway/outboundRoutes'))
 SKYFLOW_ACCOUNT_ID = str(os.environ.get('SKYFLOW_ACCOUNT_ID', ''))  # Your Account ID
 VAULT_ID = str(os.environ.get('VAULT_ID', ''))  # Your Vault ID
-VAULT_OWNER_SA_CREDENTIALS = 'Bearer '+ str(os.environ.get('VAULT_OWNER_SA_CREDENTIALS', '')) # Your API key
+VAULT_OWNER_SA_CREDENTIALS = str(os.environ.get('VAULT_OWNER_SA_CREDENTIALS', '')) # Your API key
 REQUEST_BIN_BASE_URL = str(os.environ.get('REQUEST_BIN_BASE_URL', 'https://ens3s06g2e69r.x.pipedream.net'))
 REQUEST_BIN_RELATIVE_PATH = str(os.environ.get('REQUEST_BIN_RELATIVE_PATH', '/sample/post/request/'))
 
@@ -27,7 +27,7 @@ connection_creation_headers = {
 response = requests.request("POST", SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT,
                             headers=connection_creation_headers,
                             data=connection_creation_payload)
-
+print(response.request.body)
 # Extract connection ID and URL
 connection_id = response.json().get('ID')
 connection_url = response.json().get('connectionURL') + REQUEST_BIN_RELATIVE_PATH
