@@ -10,6 +10,9 @@ You could also change the `REQUEST_BIN_BASE_URL` if desired, but feel free to us
 ### 1. Setup the vault via [vault_setup.py](/vault_setup.py)
 (TODO)
 
+You can create vault service credentials using the [Skyflow API](https://docs.skyflow.com/management/#ServiceAccountService_CreateAPIKey) or through the UI.
+
+
 ### 2. Setup Connections via [skyflow_connections_setup.py](/skyflow_connections_setup.py)
 
 `skyflow_connections_setup.py` is a Python script and configuration used to establish a connection to PipeDream (RequestBin), which serves as an echo server. It utilizes the pre-created Quick Start vault and the `credit_cards` table.
@@ -36,29 +39,8 @@ After running the script, you can verify its functionality by:
 - Observing the request and the tokenized values landing in PipeDream endpoint configured.
 - Checking that the vault is populated with the payload of the request.
 
-### 4. Automate Connection Updates via GitHub Actions
+### 4. Automate Connection updates via GitHub Actions
 
 (TODO)
 
-## Setup
-
-
-
-
-
-
-
-
-
-
-
-## Vault Service Credentials
-
-You can create vault service credentials using the [Skyflow API](https://docs.skyflow.com/management/#ServiceAccountService_CreateAPIKey) or through the UI.
-
-
-
-## GitHub Actions
-
-Alternatively, you can also run this script via GitHub Actions. You can set up a workflow to trigger it whenever `skyflow_connections_setup.py` is modified with new values.
-
+...via GitHub Actions. You can set up a workflow to trigger it whenever {TODO: JSON file} is modified with new values.
