@@ -28,13 +28,16 @@ To create a Quickstart vault,
 2. Click **Start with a template**.
 3. Under **Quickstart**, click **Create**.
 
-Studio sets up a Quickstart vault with two samples tables and some sample data.
+   Studio sets up a Quickstart vault with two samples tables and some sample data.
+
+4. In the side navigation, click the gear icon (Settings).
+5. Note your **Vault ID** and **Account ID**. You need these values to set up the connection.
 
 ## 2. Create an API key
 
 Next, create a service account with an API key to use with the Python scripts.
 
-1. In your vault's side navigation, click the people icon (Access).
+1. In the side navigation, click the people icon (Access).
 2. In the upper navigatino, click **Service accounts**.
 3. Click **Add service account**.
 4. For **Name**, enter a name for the service account.
