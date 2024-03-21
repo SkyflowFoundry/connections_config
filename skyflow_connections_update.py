@@ -6,7 +6,7 @@ import sys
 # Define constants
 
 SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT = str(os.environ.get('SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT', "https://manage.skyflowapis.com/v1/gateway/outboundRoutes"))
-VAULT_OWNER_SA_CREDENTIALS = str(os.environ.get('VAULT_OWNER_SA_CREDENTIALS', "Bearer sky-nb934-e64a0b4b69174eeeb160b02e82ef54ef"))
+VAULT_OWNER_SA_CREDENTIALS = str(os.environ.get('VAULT_OWNER_SA_CREDENTIALS', ""))
 VAULT_ID = str(os.environ.get('VAULT_ID', ''))  # Replace with your Vault ID
 SKYFLOW_ACCOUNT_ID = str(os.environ.get('SKYFLOW_ACCOUNT_ID', ""))  # Replace Account ID with your Account ID
 REQUEST_BIN_BASE_URL = str(os.environ.get('REQUEST_BIN_BASE_URL', "https://ens3s06g2e69r.x.pipedream.net"))
