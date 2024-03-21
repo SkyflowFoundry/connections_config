@@ -15,24 +15,25 @@ Before you get started, you need a vault. To create a Quickstart vault,
 
    Studio sets up a Quickstart vault with two samples tables and some sample data.
 
-4. In the side navigation, click the gear icon (Settings).
+4. In the side navigation, click **Settings** the gear icon.
 5. Note your **Account ID** and **Vault ID**. You need these values to set up the connection.
 
 ## 2. Create an API key
 
 Next, create a service account with an API key for authentication in the Python scripts.
 
-1. In the side navigation, click the people icon (Access).
-2. In the upper navigatino, click **Service accounts**.
+1. In the side navigation, click **Access** (the people icon).
+2. In the upper navigation, click **Service accounts**.
 3. Click **Add service account**.
 4. For **Name**, enter a name for the service account.
 5. Click **Next**.
 6. For **Authentication type**, choose **API key**.
 7. Click **Next**.
 8. For **Select Resource**, choose your vault.
-9. Click **Create service account**.
-10. Click **Copy to clipboard** to copy the API key. Store it somewhere secure.
-11. Click **Got it**.
+9. For **Roles**, choose **Vault Owner**.
+10. Click **Create service account**.
+11. Click **Copy to clipboard** to copy the API key. Store it somewhere secure.
+12. Click **Got it**.
 
 ## 3. Set up your local environment
 
@@ -55,6 +56,14 @@ Next, create a service account with an API key for authentication in the Python 
    ```bash
     pip install -r requirements.txt
     ```
+
+1. Set your environment variables:
+
+   ```bash
+   export VAULT_ID=<Your Vault ID>
+   export SKYFLOW_ACCOUNT_ID=<Your Account ID>
+   export VAULT_OWNER_SA_CREDENTIALS=<Your API key>
+   ```
 
 1. Open `skyflow_connections_setup.py` and update the constants with the values you collected in the previous steps:
 
