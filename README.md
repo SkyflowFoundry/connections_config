@@ -56,7 +56,7 @@ Next, create a service account with an API key for authentication in the Python 
     pip install -r requirements.txt
     ```
 
-1. Open `skyflow_connections_setup.py` and update the constanst with the values you collected in the previous steps:
+1. Open `skyflow_connections_setup.py` and update the constants with the values you collected in the previous steps:
 
     | Constant                     | Description     |
     | ---------------------------- | --------------- |
