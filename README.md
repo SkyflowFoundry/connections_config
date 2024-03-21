@@ -4,11 +4,12 @@ This repository contains a procedure and Python scripts to set up and run a conn
 
 ## 1. Create a Quickstart vault
 
-Before you get started, you need a vault.
-
-To create a Quickstart vault,
+Before you get started, you need a vault. To create a Quickstart vault,
 
 1. In Studio, click **Create Vault**.
+
+   If you need help locating your Studio URL, see [Accounts and environments](https://docs.skyflow.com/accounts-and-environments/).
+
 2. Click **Start with a template**.
 3. Under **Quickstart**, click **Create**.
 
