@@ -16,7 +16,7 @@ Before you get started, you need a vault. To create a Quickstart vault,
    Studio sets up a Quickstart vault with two samples tables and some sample data.
 
 4. In the side navigation, click the gear icon (Settings).
-5. Note your **Vault ID** and **Account ID**. You need these values to set up the connection.
+5. Note your **Account ID** and **Vault ID**. You need these values to set up the connection.
 
 ## 2. Create an API key
 
