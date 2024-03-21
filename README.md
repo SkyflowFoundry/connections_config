@@ -1,6 +1,6 @@
 # Testing Skyflow Connections with PipeDream
 
-This repository contains Python scripts to set up and run a connection between Skyflow and PipeDream, which serves as an echo server for connection testing. The scripts are designed to be run in sequence and are a reference for setting up and running connections with Skyflow.
+This repository contains Python scripts to set up and run a connection between Skyflow and PipeDream, which serves as an echo server for connection testing. The scripts are designed to be run in sequence and are a reference for setting up and running connections with Skyflow. Additionally, the repository contains a GitHub Actions workflow to automate the process of updating the connection with new configuration values.
 
 ## 0. Prerequisites
 
@@ -18,7 +18,7 @@ Before you begin, get the following information and update the constants at the 
 
   If you don't have a service account with the Vault Owner permissions, you can create a service account through [Studio](https://docs.skyflow.com/api-authentication/#create-a-service-account) or with the [Management API](https://docs.skyflow.com/management/#ServiceAccountService_CreateAPIKey).
 
-You can change the `REQUEST_BIN_BASE_URL`, but feel free to use the one specified in the script.
+You can change `REQUEST_BIN_BASE_URL`, but feel free to use the one specified in the script.
 
 ## 1. Set up the vault via [vault_setup.py](/vault_setup.py)
 
