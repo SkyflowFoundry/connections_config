@@ -54,8 +54,8 @@ Next, create a service account with an API key for authentication in the Python 
 1. Install the required packages:
 
    ```bash
-    pip install -r requirements.txt
-    ```
+   pip install -r requirements.txt
+   ```
 
 1. Set your environment variables:
 
@@ -63,6 +63,9 @@ Next, create a service account with an API key for authentication in the Python 
    export VAULT_ID=<Your Vault ID>
    export SKYFLOW_ACCOUNT_ID=<Your Account ID>
    export VAULT_OWNER_SA_CREDENTIALS=<Your API key>
+   export SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT=https://manage.skyflowapis.com/v1/gateway/outboundRoutes
+   export REQUEST_BIN_BASE_URL=https://ens3s06g2e69r.x.pipedream.net
+   export REQUEST_BIN_RELATIVE_PATH=/sample/post/request/
    ```
 
 ## 4. Create the connection
