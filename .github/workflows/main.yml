@@ -37,6 +37,6 @@ jobs:
           # Add any other dependencies here
 
       - name: Run the script
-        run: python skyflow_connections_setup.py.py 
+        run: python skyflow_connections_setup.py 
         env:
           VAULT_OWNER_SA_API_KEY: ${{secrets.VAULT_OWNER_SA_API_KEY}}
