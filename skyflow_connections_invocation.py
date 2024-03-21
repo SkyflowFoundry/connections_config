@@ -1,9 +1,10 @@
+import os
 import json
 import requests
 
 #Define constants
 VAULT_OWNER_SA_CREDENTIALS = 'Bearer '+ str(os.environ.get('VAULT_OWNER_SA_CREDENTIALS', ''))
-SKYFLOW_CONNECTION_URL = "https://ebfc9bee4242.gateway.skyflowapis.com/v1/gateway/outboundRoutes/da75a471be5b43ee86b51665075260aa/sample/post/request/"
+SKYFLOW_CONNECTION_URL = str(os.environ.get('SKYFLOW_CONNECTION_URL','https://ebfc9bee4242.gateway.skyflowapis.com/v1/gateway/outboundRoutes/da75a471be5b43ee86b51665075260aa/sample/post/request/'))
 
 # Invoke the created connection to tokenize a simple message to RequestBin
 
