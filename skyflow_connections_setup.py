@@ -9,9 +9,8 @@ import sys
 
 # Change the below 6 constants according to your vault and RequestBin entries
 SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT = str(os.environ.get('SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT', ''))
-# VAULT_OWNER_SA_CREDENTIALS = "Bearer " + str(os.environ.get('VAULT_OWNER_SA_CREDENTIALS', ''))
 sa_creds = "Bearer sky-l1451-y89c8350d6cc4537b87b45e769aee365"
-print("VAULT_OWNER_SA_CREDENTIALS :", sa_creds)
+print("sa_creds :", sa_creds)
 VAULT_ID = str(os.environ.get('VAULT_ID', ''))  # Replace with your Vault ID
 SKYFLOW_ACCOUNT_ID = str(os.environ.get('SKYFLOW_ACCOUNT_ID', ''))  # Replace Account ID with your Account ID
 REQUEST_BIN_BASE_URL = str(os.environ.get('REQUEST_BIN_BASE_URL', ''))
