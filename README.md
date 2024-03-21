@@ -70,7 +70,7 @@ Next, create a service account with an API key for authentication in the Python 
 
 ## 4. Setup Connections via [skyflow_connections_setup.py](/skyflow_connections_setup.py)
 
-`skyflow_connections_setup.py` creates and configures a connection to PipeDream (RequestBin), which serves as an echo server. It uses a Quickstart vault and the `credit_cards` table.
+`skyflow_connections_setup.py` creates and configures a connection to PipeDream (RequestBin), which serves as an echo server. It uses the `credit_cards` table in your Quickstart vault.
 
 To set up the connection, run the following command:
 
