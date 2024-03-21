@@ -12,11 +12,11 @@ Before you begin, get the following information and update the constants at the 
 
 You can change the `REQUEST_BIN_BASE_URL`, but feel free to use the one specified in the script.
 
-## 1. Setup the vault via [vault_setup.py](/vault_setup.py)
+If you don't have a service account with the Vault Owner permissions, you can create a service account with the [Management API](https://docs.skyflow.com/management/#ServiceAccountService_CreateAPIKey) or through [Studio](https://docs.skyflow.com/api-authentication/#create-a-service-account).
+
+## 1. Set up the vault via [vault_setup.py](/vault_setup.py)
 
 (TODO)
-
-You can create service account credentials using the [Management API](https://docs.skyflow.com/management/#ServiceAccountService_CreateAPIKey) or through [Studio](https://docs.skyflow.com/api-authentication/#create-a-service-account).
 
 ## 2. Setup Connections via [skyflow_connections_setup.py](/skyflow_connections_setup.py)
 
