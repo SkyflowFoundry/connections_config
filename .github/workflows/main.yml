@@ -5,10 +5,10 @@ name: connections-config-ci
 on:
   push:
       branches: [ main ]
-      paths: ['connections_config/connections_invocation_payload.json']
+      paths: ['connections_invocation_payload.json']
   pull_request:
       branches: [ ]
-      paths: ['connections_config/connections_invocation_payload.json']
+      paths: ['connections_invocation_payload.json']
   workflow_dispatch:
 
 jobs:
