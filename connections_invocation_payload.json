@@ -1,0 +1,7 @@
+{
+ "cardholder_name": "Joice John",
+ "card_number": "4242-4242-4242-4242",
+ "expiry_month": "12",
+ "expiry_year" : "24",
+ "cvv" : "123"
+}

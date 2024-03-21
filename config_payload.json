@@ -1,0 +1,37 @@
+{
+    "vaultID": "w6063d10d50d4386807dd7794f714577",
+    "name": "Pipedream Connection",
+    "baseURL": "https://ens3s06g2e69r.x.pipedream.net",
+    "routes": [
+        {
+            "path": "/sample/post/request/",
+            "method": "POST",
+            "requestBody": [
+                {
+                    "action": "TOKENIZATION",
+                    "fieldName": "cardholder_name",
+                    "table": "credit_cards",
+                    "column": "cardholder_name"
+                },
+                {
+                    "action": "TOKENIZATION",
+                    "fieldName": "card_number",
+                    "table": "credit_cards",
+                    "column": "card_number"
+                },
+                {
+                    "action": "TOKENIZATION",
+                    "fieldName": "expiry_month",
+                    "table": "credit_cards",
+                    "column": "expiry_month"
+                },
+                {
+                    "action": "TOKENIZATION",
+                    "fieldName": "expiry_year",
+                    "table": "credit_cards",
+                    "column": "expiry_year"
+                }
+            ]
+        }
+    ]
+}
