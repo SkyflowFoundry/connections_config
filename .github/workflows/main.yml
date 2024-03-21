@@ -5,10 +5,10 @@ name: connections-config-ci
 on:
   push:
       branches: [ main ]
-      paths: ['connections_config/connections_invocation_payload.json']
+      paths: ['config_payload.json']
   pull_request:
       branches: [ ]
-      paths: ['connections_config/connections_invocation_payload.json']
+      paths: ['config_payload.json']
   workflow_dispatch:
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run: 
-        working-directory: ./connections-config
+        working-directory: .
     steps:
       - uses: actions/checkout@v3
         with:
@@ -37,6 +37,6 @@ jobs:
           # Add any other dependencies here
 
       - name: Run the script
-        run: python skyflow_connections_setup.py.py 
+        run: python skyflow_connections_setup.py 
         env:
           VAULT_OWNER_SA_API_KEY: ${{secrets.VAULT_OWNER_SA_API_KEY}}
