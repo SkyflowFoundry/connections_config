@@ -65,23 +65,11 @@ Next, create a service account with an API key for authentication in the Python 
    export VAULT_OWNER_SA_CREDENTIALS=<Your API key>
    ```
 
-1. Open `skyflow_connections_setup.py` and update the constants with the values you collected in the previous steps:
+## 4. Create the connection
 
-    | Constant                     | Description     |
-    | ---------------------------- | --------------- |
-    | `VAULT_ID`                   | Your Vault ID.  |
-    | `SKYFLOW_ACCOUNT_ID`         | Your Account ID. |
-    | `VAULT_OWNER_SA_CREDENTIALS` | Your API key.    |
+[skyflow_connections_setup.py](/skyflow_connections_setup.py) creates and configures a connection to PipeDream (RequestBin), which serves as an echo server. It uses the `credit_cards` table in your Quickstart vault.
 
-    You can change `REQUEST_BIN_BASE_URL`, but feel free to use the one specified in the script.
-
-1. Save and close the file.
-
-## 4. Setup Connections via [skyflow_connections_setup.py](/skyflow_connections_setup.py)
-
-`skyflow_connections_setup.py` creates and configures a connection to PipeDream (RequestBin), which serves as an echo server. It uses the `credit_cards` table in your Quickstart vault.
-
-To set up the connection, run the following command:
+To create the connection, run the following command:
 
 ```bash
 python skyflow_connections_setup.py
