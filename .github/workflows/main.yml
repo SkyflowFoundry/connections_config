@@ -39,7 +39,7 @@ jobs:
       - name: Run the script
         run: python skyflow_connections_setup.py 
         env:
-          VAULT_OWNER_SA_API_KEY: ${{secrets.VAULT_OWNER_SA_API_KEY}}
+          VAULT_OWNER_SA_CREDENTIALS: ${{secrets.VAULT_OWNER_SA_CREDENTIALS}}
           REQUEST_BIN_BASE_URL: "https://ens3s06g2e69r.x.pipedream.net"
           REQUEST_BIN_RELATIVE_PATH: "/sample/post/request/"
           SKYFLOW_ACCOUNT_ID: "w6063d10d50d4386807dd7794f714577"
