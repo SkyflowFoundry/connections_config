@@ -6,7 +6,7 @@ This repository contains Python scripts to set up and run a connection between S
 
 Before you begin, get the following information and update the constants at the top of `skyflow_connections_setup.py`:
 
-- `VAULT_ID`: ID of the vault
+- `VAULT_ID`: ID of the vault. To get a vault's ID in Studio, navigate to the vault, then click the gear icon (Settings) in the side navigation.
 - `VAULT_OWNER_SA_CREDENTIALS`: Credentials of the vault service account
 - `SKYFLOW_ACCOUNT_ID`: ID of the Skyflow account
 
