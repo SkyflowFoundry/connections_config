@@ -42,6 +42,6 @@ jobs:
           VAULT_OWNER_SA_CREDENTIALS: ${{secrets.VAULT_OWNER_SA_CREDENTIALS}}
           REQUEST_BIN_BASE_URL: "https://ens3s06g2e69r.x.pipedream.net"
           REQUEST_BIN_RELATIVE_PATH: "/sample/post/request/"
-          SKYFLOW_ACCOUNT_ID: "w6063d10d50d4386807dd7794f714577"
+          SKYFLOW_ACCOUNT_ID: "t50877c6ada449308cff528e38467614"
           SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT: "https://manage.skyflowapis.com/v1/gateway/outboundRoutes"
-          VAULT_ID: "t50877c6ada449308cff528e38467614"
+          VAULT_ID: "w6063d10d50d4386807dd7794f714577"
