@@ -36,8 +36,7 @@
                     "fieldName": "cvv",
                     "table": "credit_cards",
                     "column": "cvv"
-                },
-                
+                }
             ]
         }
     ]
