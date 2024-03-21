@@ -1,5 +1,7 @@
+import os
 import json
 import requests
+import sys
 
 # Define constants
 SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT = str(os.environ.get('SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT', ''))
