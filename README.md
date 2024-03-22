@@ -69,6 +69,7 @@ Next, create a service account with an API key for authentication in the Python 
    ```
 
 1. Open `config_payload.json` and update the `vaultID` field to your Vault ID.
+1. Save and close the file.
 
 ## 4. Create the connection
 
