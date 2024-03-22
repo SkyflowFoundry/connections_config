@@ -111,4 +111,23 @@ To set up the workflow, you need to add the `VAULT_OWNER_SA_CREDENTIALS` as a re
 6. For **Secret**, enter your API key.
 7. Click **Add secret**.
 
-After you add the secret, the GitHub Actions workflow in [`.github/workflows/main.yaml`](/.github/workflows/main.yaml) runs whenever `config_payload.json` is modified and pushed to GitHub. The workflow updates the connection with the new configuration values.
+**Note:** You can repeat this process for the `SKYFLOW_ACCOUNT_ID`, `VAULT_ID`, and `SKYFLOW_CONNECTION_ID` secrets as well if you prefer to not hardcode them in the workflow.
+
+After you add the secret, you need to update the GitHub Actions workflow template with your information:
+
+1. Open _.github/workflows/main.yaml_ and update the `env` section with your information:
+
+   ```yaml
+   env:
+      SKYFLOW_ACCOUNT_ID: "<ACCOUNT_ID>"
+      VAULT_ID: "<VAULT_ID>"
+      SKYFLOW_CONNECTION_ID: "<CONNECTION_ID>"
+      VAULT_OWNER_SA_CREDENTIALS: ${{secrets.VAULT_OWNER_SA_CREDENTIALS}}
+      REQUEST_BIN_BASE_URL: "https://ens3s06g2e69r.x.pipedream.net"
+      REQUEST_BIN_RELATIVE_PATH: "/sample/post/request/"
+      SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT: "https://manage.skyflowapis.com/v1/gateway/outboundRoutes"
+   ```
+
+2. Save, close, commit, and push the file.
+
+Now whenever `config_payload.json` is modified and pushed to GitHub, the workflow updates your connection with the new configuration values. You can also run the workflow manually by navigating to the **Actions** tab in your repository, selecting the workflow, and clicking **Run workflow**.
