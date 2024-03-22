@@ -13,7 +13,7 @@ REQUEST_BIN_BASE_URL = str(os.environ.get('REQUEST_BIN_BASE_URL', 'https://ens3s
 REQUEST_BIN_RELATIVE_PATH = str(os.environ.get('REQUEST_BIN_RELATIVE_PATH', '/sample/post/request/'))
 '''
 SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT = str(os.environ.get('SKYFLOW_OUTBOUND_CONNECTION_ENDPOINT', 'https://manage.skyflowapis.com/v1/gateway/outboundRoutes'))
-VAULT_OWNER_SA_CREDENTIALS = str(os.environ.get('VAULT_OWNER_SA_CREDENTIALS', '')) # Your API key
+VAULT_OWNER_SA_CREDENTIALS = 'Bearer ' + str(os.environ.get('VAULT_OWNER_SA_CREDENTIALS', '')) # Your API key
 VAULT_ID = str(os.environ.get('VAULT_ID', ''))  # Your Vault ID
 SKYFLOW_ACCOUNT_ID = str(os.environ.get('SKYFLOW_ACCOUNT_ID', ''))  # Your Account ID
 REQUEST_BIN_BASE_URL = str(os.environ.get('REQUEST_BIN_BASE_URL', 'https://ens3s06g2e69r.x.pipedream.net'))
