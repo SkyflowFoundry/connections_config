@@ -30,12 +30,6 @@
                     "fieldName": "expiry_year",
                     "table": "credit_cards",
                     "column": "expiry_year"
-                },
-                {
-                    "action": "TOKENIZATION",
-                    "fieldName": "cvv",
-                    "table": "credit_cards",
-                    "column": "cvv"
                 }
             ]
         }
