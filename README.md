@@ -80,16 +80,18 @@ To create the connection, run the following command:
 python skyflow_connections_setup.py
 ```
 
+Note your connection ID and URL. You'll need them for the next steps.
+
 The script creates a connection to PipeDream and configures it to tokenize `cardholder_name`, `card_number`, `expiry_month`, and `expiry_year`.
 
-## 5. Invoke the Connection via [skyflow_connections_invocation.py](/skyflow_connections_invocation.py)
+## 5. Invoke the connection
 
 `skyflow_connections_invocation.py` invokes the connection created in the previous step with a payload of `cardholder_name`, `card_number`, `expiry_month`, and `expiry_year`.
 
 To invoke the connection, run the following command:
 
 ```bash
-python skyflow_connections_invocation.py
+python skyflow_connections_invocation.py <CONNECTION_URL>
 ```
 
 After you run the script, you can verify its functionality by:
@@ -97,7 +99,7 @@ After you run the script, you can verify its functionality by:
 - Observing the request and the tokenized values landing in the configured PipeDream endpoint.
 - Checking that the vault is populated with the payload of the request.
 
-## 6. Automate Connection updates with GitHub Actions
+## 6. Automate connection updates with GitHub Actions
 
 To automate the process of updating the connection with new configuration values, you can set up a workflow to update the configuration whenever [`config_payload.json`](/config_payload.json) is modified.
 
